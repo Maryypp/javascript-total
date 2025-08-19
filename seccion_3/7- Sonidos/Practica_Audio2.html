@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sonidos</title>
+    <style>
+        audio :webkit-media-controls-panel {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button onclick="test()">Click aqui</button>
+    </p>
+   
+    <audio id="audioAlarma" controls>
+        <source src="Audios/alarma.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+
+        let elementoSonidoAlarma = document.getElementById("audioAlarma");
+        
+        function test() {
+            elementoSonidoAlarma.play();
+        }
+    </script>
+
+    
+    
+</body>
+</html>
