@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotidiano</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+
+<body onload="comenzarReloj()">
+
+    <h1 id="tiempoRestante">30</h1>
+
+    <audio id="gameOverSound">
+        <source src="audio/gameover.mp3" type="audio/mpeg">
+    </audio>
+
+    <pre>
+1. En Gravity Falls, ¿como se llaman los gemelos protagonistas?
+<input type="text" id="respuesta1">
+
+2. En Los Hechiceros de Waverly Place, ¿quien gana finalmente la competencia de magia?
+<input type="text" id="respuesta2">
+
+3. En Star vs las Fuerzas del Mal, ¿como se llama el mejor amigo humado de Star?
+<input type="text" id="respuesta3">
+
+4. En Phineas y Ferb, ¿como se llama la mascota?
+<input type="text" id="respuesta4">
+
+5. Quien es la madre de Leia Organa?
+<input type="text" id="respuesta5">
+
+<button onclick="location.reload()">Volver a Intentar</button>
+<button onclick="mostrarRespuestas()">Termine</button>
+    </pre>
+
+    <script>
+
+        let tiempo = 30;
+        let elementoTextoTiempo = document.getElementById("tiempoRestante");
+        let elementoSonido = document.getElementById("gameOverSound");
+        let intervalo;
+
+        function comenzarReloj() {
+            intervalo = setInterval(ticTac, 1000);
+        }
+
+        function ticTac() {
+            tiempo--;
+            elementoTextoTiempo.textContent = tiempo;
+
+            if (tiempo == 0) {
+                clearInterval(intervalo);
+                tiempoCumplido();
+            }
+        }
+
+        function tiempoCumplido() {
+            elementoSonido.play();
+            alert("¡GAME OVER!");
+        }
+
+        function mostrarRespuestas() {
+            clearInterval(intervalo);
+            let Respuestas =
+                [
+                    document.getElementById("respuesta1").value,
+                    document.getElementById("respuesta2").value,
+                    document.getElementById("respuesta3").value,
+                    document.getElementById("respuesta4").value,
+                    document.getElementById("respuesta5").value
+                ]
+
+            let fechaActual = new Date();
+            alert("La fecha de hoy es " + fechaActual.toLocaleDateString('es-ES') +
+                "\nTus respuestas son: \n" + Respuestas.join("\n")
+            );
+        }
+    </script>
+</body>
+
+</html>
