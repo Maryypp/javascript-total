@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practica operadores logicos</title>
+</head>
+<body>
+    <p>Ingrese numero 1</p>
+    <input type="number" id="numero1">
+    <p>Ingrese numero 2</p>
+    <input type="number" id="numero2">
+    <button onclick="CompararNumeros()">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+
+
+        function CompararNumeros() {
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value;
+            let respuesta;
+
+            if (numero1 > numero2) {
+                respuesta = "true";
+            } else {
+                respuesta = "false";
+            }
+
+            document.getElementById("resultado").textContent = respuesta;
+        }
+            
+
+    </script>
+</body>
+</html>

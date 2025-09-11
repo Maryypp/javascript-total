@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(219, 186, 217)
+}
+
+input {
+    height: 20px;    
+    width: 80px;
+    font-size: 1rem;
+}
+
+button {
+    color: #000000;
+    height: 35px;    
+    width: 140px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #a9ecec;
+}
+
+.container {
+    text-align: center;
+    background: rgb(186, 241, 228);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #490d3f;
+}
+
+.genero {
+    font-weight: folder;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
