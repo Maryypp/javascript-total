@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Practica 1</title>
+</head>
+<body>
+    <script>
+        function testLoop(numVueltas) {
+            let contador = 1;
+            do {
+                document.write('Vueltas dadas: ' + contador + "<br>");
+                contador++;
+            } while (contador <= numVueltas);
+        }
+        let numeroVueltas = prompt("Elige el numero de vueltas:")
+        testLoop(numeroVueltas);
+    </script>
+</body>
+</html>
