@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html> 
 <head>
-    <title>Proyecto</title>
-    <link rel="stylesheet" href="misEstilos.css">
-    <script src="misScripts.js"></script>
-    
+  <title>Proyecto</title> 
+  <link rel="stylesheet" href="misEstilos.css"> 
+  <script src="misScripts.js"></script> 
 </head>
-<body>
-    <h1>Bienvenido a tu boletin estudiantil</h1>
+<body onload="listarNotas()"> <!-- apenas se carga la pagina se ejecuta la función listarNotas() para mostrar las notas -->
 
-    <h2>Alumno: Bruce Wayne</h2>
+  <img src="ctp.jpg" alt="logo" width="100"> 
 
-    <h2>Notas:</h2>
-    <ul id="listaNotas"></ul>
+  <h2>Bienvenido a tu boletín estudiantil</h2> 
+  <h3>Alumno: Mary </h3> 
 
-    <h3>Promedio:</h3>
-    <button onclick="CalcularPromedio()">Calcular Promedio</button>
+  <h3>Notas:</h3>
+  <ul id="notas"></ul> <!-- aqui van las notas y el ul es para ponerlas en lista -->
 
-    <h3>Nota más alta:</h3>
-    <button onclick="notaMasAlta">Buscar nota más alta</button>
+  <h4>Promedio: <span id="promedio"></span></h4> <!--  el span sirve para que el promedio salga de una a la par del titulo -->
+  <button onclick="CalcularPromedio()">Calcular Promedio</button> 
 
-    <h3>¿Hubo algún aplazo?</h3>
-    <button onclick="consultarAplazo">Consultar Aplazo</button>
+  <h4>Nota más alta: <span id="mayor"></span></h4> 
+  <button onclick="notaMasAlta()">Buscar nota más alta</button> 
+
+  <h4>¿Hubo algún aplazo? <span id="aplazo"></span></h4> 
+  <button onclick="consultarAplazo()">Consultar Aplazo</button> 
 </body>
 </html>

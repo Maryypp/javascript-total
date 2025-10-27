@@ -1,0 +1,27 @@
+body {
+  font-family: Arial; 
+  background: #f8f8f8; 
+  text-align: center; 
+  padding: 20px; /* deja espacio alrededor de todo el contenido */
+}
+
+
+img {
+  margin: 10px auto; 
+  text-align: center; 
+}
+
+
+ul {
+  display: inline-block; /* esto es para que la lista quede centrada */
+  text-align: left; /* esto es para que los puntitos queden del lado izquierdo */
+}
+
+
+button {
+  margin: 5px; 
+  padding: 5px 10px; /* esto es para que el texto de los botones no queden pegados al borde */
+  background: lightgray;
+  border: black; 
+  cursor: pointer; 
+}
