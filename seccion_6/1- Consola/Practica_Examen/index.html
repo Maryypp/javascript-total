@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación Manual</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Facturación Manual</h1>
+        <h2>Nombre del Cliente:</h2>
+        <input type="text" id="cliente">
+
+        <h1> <big>Agregar Productos</big></h1>
+        <input type="text" id="producto" placeholder="Nombre del producto">
+        
+        <input type="text" id="precio" placeholder="Precio₡">
+
+        <input type="text" id="cantidad" placeholder="Cantidad">
+
+        <button onclick="agregar()">Agregar</button> <br>
+        <ul id="lista"></ul>
+        <br>
+        <br>
+
+        <h2>Descuento (%): </h2>
+        <input type="text" id="descuento">
+        <br>
+        <br>
+
+        <h2>Impuesto (%): </h2>
+        <input type="text" id="impuesto">
+
+        <h2><big>Detalle de Productos</big></h2>
+        <ul id="detalleProductos"></ul>
+
+        <button onclick="generarFactura()">Generar Factura</button>
+
+        <h1><big>Resumen de Factura</big></h1>
+        <pre id="resumenFactura"></pre>
+
+
+    </div>
+    <script>
+        function agregar(){
+    const precio = document.getElementById("precio");
+    const cantidad = document.getElementById("cantidad");
+    const input = document.getElementById('producto');
+    const Lista = document.getElementById('detalleProductos');
+    const texto = input.value.trim();
+
+    if (texto !== ''){
+        const item = document.createElement('li');
+        item.textContent = texto;
+        lista.appendChild(item);
+        input.value = '';
+    }
+}
+    </script>
+</body>
+</html>

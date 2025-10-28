@@ -1,0 +1,26 @@
+body{
+    background-color: white;
+}
+
+.container{
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    max-width: 1000px; 
+    box-shadow: 1px 1px 10px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    background-color: #0066cc;
+    
+}
+button:hover {
+    background-color: #004999;
+}
+
+ul{
+    background-color: #eef;
+    border-radius: 8px;
+}

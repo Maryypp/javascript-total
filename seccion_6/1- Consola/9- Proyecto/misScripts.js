@@ -1,4 +1,3 @@
-
 let notas = [9, 7, 8, 9, 3]; // array con las notas 
 
 // funcion para mostrar las notas en la página
